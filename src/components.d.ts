@@ -6,56 +6,162 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface FlexboxComponent {
+    }
+    interface GridComponent {
+    }
+    interface HeaderComponent {
+    }
+    interface IntroToHtml {
+    }
+    interface MyButtons {
+    }
+    interface MyTexts {
+    }
+    interface SideBarComponent {
+        "menuItemIcon": string;
+        "menuItemName": string;
+    }
+    interface VideoPreviewComponent {
+        "author": string;
+        "channelImgSrc": string;
+        "imgSrc": string;
+        "stats": string;
+        "videoTime": string;
+        "videoTitle": string;
+    }
+    interface VideoPreviewComponentInline {
+        "author": string;
+        "channelImgSrc": string;
+        "imgSrc": string;
+        "stats": string;
+        "videoTitle": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLFlexboxComponentElement extends Components.FlexboxComponent, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLFlexboxComponentElement: {
+        prototype: HTMLFlexboxComponentElement;
+        new (): HTMLFlexboxComponentElement;
+    };
+    interface HTMLGridComponentElement extends Components.GridComponent, HTMLStencilElement {
+    }
+    var HTMLGridComponentElement: {
+        prototype: HTMLGridComponentElement;
+        new (): HTMLGridComponentElement;
+    };
+    interface HTMLHeaderComponentElement extends Components.HeaderComponent, HTMLStencilElement {
+    }
+    var HTMLHeaderComponentElement: {
+        prototype: HTMLHeaderComponentElement;
+        new (): HTMLHeaderComponentElement;
+    };
+    interface HTMLIntroToHtmlElement extends Components.IntroToHtml, HTMLStencilElement {
+    }
+    var HTMLIntroToHtmlElement: {
+        prototype: HTMLIntroToHtmlElement;
+        new (): HTMLIntroToHtmlElement;
+    };
+    interface HTMLMyButtonsElement extends Components.MyButtons, HTMLStencilElement {
+    }
+    var HTMLMyButtonsElement: {
+        prototype: HTMLMyButtonsElement;
+        new (): HTMLMyButtonsElement;
+    };
+    interface HTMLMyTextsElement extends Components.MyTexts, HTMLStencilElement {
+    }
+    var HTMLMyTextsElement: {
+        prototype: HTMLMyTextsElement;
+        new (): HTMLMyTextsElement;
+    };
+    interface HTMLSideBarComponentElement extends Components.SideBarComponent, HTMLStencilElement {
+    }
+    var HTMLSideBarComponentElement: {
+        prototype: HTMLSideBarComponentElement;
+        new (): HTMLSideBarComponentElement;
+    };
+    interface HTMLVideoPreviewComponentElement extends Components.VideoPreviewComponent, HTMLStencilElement {
+    }
+    var HTMLVideoPreviewComponentElement: {
+        prototype: HTMLVideoPreviewComponentElement;
+        new (): HTMLVideoPreviewComponentElement;
+    };
+    interface HTMLVideoPreviewComponentInlineElement extends Components.VideoPreviewComponentInline, HTMLStencilElement {
+    }
+    var HTMLVideoPreviewComponentInlineElement: {
+        prototype: HTMLVideoPreviewComponentInlineElement;
+        new (): HTMLVideoPreviewComponentInlineElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "flexbox-component": HTMLFlexboxComponentElement;
+        "grid-component": HTMLGridComponentElement;
+        "header-component": HTMLHeaderComponentElement;
+        "intro-to-html": HTMLIntroToHtmlElement;
+        "my-buttons": HTMLMyButtonsElement;
+        "my-texts": HTMLMyTextsElement;
+        "side-bar-component": HTMLSideBarComponentElement;
+        "video-preview-component": HTMLVideoPreviewComponentElement;
+        "video-preview-component-inline": HTMLVideoPreviewComponentInlineElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface FlexboxComponent {
+    }
+    interface GridComponent {
+    }
+    interface HeaderComponent {
+    }
+    interface IntroToHtml {
+    }
+    interface MyButtons {
+    }
+    interface MyTexts {
+    }
+    interface SideBarComponent {
+        "menuItemIcon"?: string;
+        "menuItemName"?: string;
+    }
+    interface VideoPreviewComponent {
+        "author"?: string;
+        "channelImgSrc"?: string;
+        "imgSrc"?: string;
+        "stats"?: string;
+        "videoTime"?: string;
+        "videoTitle"?: string;
+    }
+    interface VideoPreviewComponentInline {
+        "author"?: string;
+        "channelImgSrc"?: string;
+        "imgSrc"?: string;
+        "stats"?: string;
+        "videoTitle"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "flexbox-component": FlexboxComponent;
+        "grid-component": GridComponent;
+        "header-component": HeaderComponent;
+        "intro-to-html": IntroToHtml;
+        "my-buttons": MyButtons;
+        "my-texts": MyTexts;
+        "side-bar-component": SideBarComponent;
+        "video-preview-component": VideoPreviewComponent;
+        "video-preview-component-inline": VideoPreviewComponentInline;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "flexbox-component": LocalJSX.FlexboxComponent & JSXBase.HTMLAttributes<HTMLFlexboxComponentElement>;
+            "grid-component": LocalJSX.GridComponent & JSXBase.HTMLAttributes<HTMLGridComponentElement>;
+            "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
+            "intro-to-html": LocalJSX.IntroToHtml & JSXBase.HTMLAttributes<HTMLIntroToHtmlElement>;
+            "my-buttons": LocalJSX.MyButtons & JSXBase.HTMLAttributes<HTMLMyButtonsElement>;
+            "my-texts": LocalJSX.MyTexts & JSXBase.HTMLAttributes<HTMLMyTextsElement>;
+            "side-bar-component": LocalJSX.SideBarComponent & JSXBase.HTMLAttributes<HTMLSideBarComponentElement>;
+            "video-preview-component": LocalJSX.VideoPreviewComponent & JSXBase.HTMLAttributes<HTMLVideoPreviewComponentElement>;
+            "video-preview-component-inline": LocalJSX.VideoPreviewComponentInline & JSXBase.HTMLAttributes<HTMLVideoPreviewComponentInlineElement>;
         }
     }
 }

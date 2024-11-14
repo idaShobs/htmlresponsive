@@ -1,0 +1,28 @@
+.main-box{
+    
+    height: 74px;
+    display: flex;
+    align-items: center; /*flex-direction:row -> vertical alignment, flex-direction:column -> horizontal alignment*/
+    justify-content: center; /*flex-direction:row -> horizontal alignment, flex-direction:column -> vertical alignment */
+    flex-direction: column; /*vertical display*/
+    cursor: pointer;
+}
+
+.main-box:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+/*space helps target all imagesinside the box*/
+.main-box img {
+    height: 24px;
+    margin-bottom: 6px;
+
+}
+
+.main-box div {
+    font-size: 10px;
+    font-weight: 400;
+    color: rgb(33, 37, 41);
+
+
+}

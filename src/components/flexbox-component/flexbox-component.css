@@ -1,0 +1,14 @@
+.flex-container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;  /* how items are aligned vertically*/
+
+}
+.div1{
+    background-color: lightblue;
+}
+.div2{
+    background-color: lightpink;
+    flex: 1;
+}

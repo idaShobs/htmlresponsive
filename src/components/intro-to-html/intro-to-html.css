@@ -1,0 +1,200 @@
+.header-container {
+    display: flex;
+    height: 48px;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    position: fixed;
+    top:0;
+    left: 0;
+    right:0;
+    z-index: 100; /*always appear on top*/
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(222, 222, 222);
+
+
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*column-gap: 12px;*/
+    gap: 40px 16px; /* This sets both row and column gaps to 20px */
+    
+}
+
+
+/*Responsive desiggn: The css in here will only activate if screensize is 800px or less*/
+@media (max-width: 800px) {
+    .videos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 801px) and (max-width: 999px) {
+    .videos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1000px) {
+    .videos-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.side-bar{
+    position: fixed; /*position fixed in BROWSER*/
+    left:0;
+    bottom: 0;
+    top: 48px;
+    background-color: white;
+    width: 72px;
+    z-index: 200;
+    padding-top: 5px;
+
+}
+/*Whenever position: absolute is placed inside position:fixed, then values of top, bottom, left and right are relativ to the fixed elements positions*/
+/*Whenever position: absolute is placed inside position:relative, then values of top, bottom, left and right are relativ to the relative elements positions, and it remains there even while you scroll*/
+
+.left-section {
+    align-items: center;
+    display: flex;
+}
+.youtube-logo,
+.hamburger-menu {
+    height: 20px;
+    margin-left: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.middle-section {
+    display: flex;
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+    align-items: center;
+    
+
+}
+
+.search-bar {
+    font-size: 16px;
+    border: 1px solid rgb(192, 192, 192);
+    flex: 1;
+    height: 32px;
+    padding-left: 12px;
+    border-radius: 2px;
+    width: 0;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05); /*inset for inner box shadow*/
+}
+
+.search-bar::placeholder {
+    font-size: 16px;
+}
+
+
+.search-btn {
+    height: 36px;
+    width: 60px;
+    background-color: rgb(240, 240, 240);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(192, 192, 192);
+    margin-left: -1px;
+    margin-right: 10px;
+}
+.search-btn, .voice-btn {
+    background-color: rgb(240, 240, 240);
+
+}
+.search-btn, .voice-btn, .upload-icon-container, .youtube-apps-icon-container, .notifications-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+
+.search-btn .tooltip,
+.voice-btn .tooltip,
+.upload-icon-container .tooltip,
+.youtube-apps-icon-container .tooltip,
+.notifications-icon-container .tooltip {
+    background-color: gray;
+    color: white;
+    padding: 4px 8px; /*top bottom, right left*/
+    border-radius: 2px;
+    font-size: 12px;
+    position: absolute;
+    bottom: -30px; /*0 means bottom of tooltip will be at bottom of search button*/
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+
+.search-btn:hover .tooltip,
+.voice-btn:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.youtube-apps-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip   {
+    opacity: 1;
+}
+
+.voice-btn {
+    height: 36px;
+    width: 36px;
+    border-radius: 18px;
+    border: none;
+    
+}
+
+
+
+.voice-icon,
+.search-icon, .upload-icon, .youtube-apps-icon, .notifications-icon  {
+    height: 22px;
+}
+
+
+
+.right-section {
+    width: 180px;
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+
+}
+
+
+
+
+.notifications-count {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-size: 11px;
+    padding: 2px 5px 2px 5px; /*clockwise from top: top, right, bottom, left*/
+    border-radius: 10px;
+}
+
+.main-channel-icon {
+    height: 32px;
+    border-radius: 16px;
+
+}
+
+
+
+
+  
